@@ -1,0 +1,6 @@
+consul = "consul.service.consul:8500"
+template {
+    source = "/opt/kibana/docker-entrypoint.sh.ctmpl"
+    destination = "/opt/kibana/docker-entrypoint.sh"
+    command = "chmod a+x /opt/kibana/docker-entrypoint.sh; /opt/kibana/docker-entrypoint.sh kibana &"
+}
